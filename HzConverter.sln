@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HzConverter", "HzConverter\HzConverter.csproj", "{8BD7E6DA-896F-47DB-9D1B-990BA4EFA06E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HzConverter", "HzConverter\HzConverter.csproj", "{2A4398EC-FA7A-4B03-B5D0-E215CCA55F8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8BD7E6DA-896F-47DB-9D1B-990BA4EFA06E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8BD7E6DA-896F-47DB-9D1B-990BA4EFA06E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8BD7E6DA-896F-47DB-9D1B-990BA4EFA06E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8BD7E6DA-896F-47DB-9D1B-990BA4EFA06E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A4398EC-FA7A-4B03-B5D0-E215CCA55F8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A4398EC-FA7A-4B03-B5D0-E215CCA55F8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A4398EC-FA7A-4B03-B5D0-E215CCA55F8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A4398EC-FA7A-4B03-B5D0-E215CCA55F8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A4616345-F213-42AD-858D-D7021A529E49}
+		SolutionGuid = {3866193B-12BF-4CCE-AE9B-E35B6473404E}
 	EndGlobalSection
 EndGlobal
