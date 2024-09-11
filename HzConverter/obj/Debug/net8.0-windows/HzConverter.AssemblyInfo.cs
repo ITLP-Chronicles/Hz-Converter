@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HzConverter")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+599c86a3931ac9d60826cfb01cd48f401294612c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01704f4eefe581653e99dda36849c5da17467515")]
 [assembly: System.Reflection.AssemblyProductAttribute("HzConverter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HzConverter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
