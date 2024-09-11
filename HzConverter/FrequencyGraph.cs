@@ -45,11 +45,12 @@ namespace HzConverter
                 g.DrawLine(pen, leftMargin, 0, leftMargin, plotHeight);
             }
 
+            float ten = (int)Math.Pow(10, (int)Math.Log10((double)Frequency));
             PointF[] points = new PointF[pointsNum];
             for (int i = 0; i < pointsNum; i++)
             {
                 float t = i / (float)(pointsNum - 1) * Time;
-                float y = 50f * (float)Math.Sin(2 * Math.PI * Frequency * t);
+                float y = 50f * (float)Math.Sin(2 * Math.PI * Frequency * t / ten);
                 float xScreen = leftMargin + i / (float)(pointsNum - 1) * plotWidth;
                 float yScreen = plotHeight / 2 - y;
                 points[i] = new PointF(xScreen, yScreen);
@@ -59,11 +60,10 @@ namespace HzConverter
             {
                 g.DrawLines(pen, points);
             }
-
-            using (Font font = new Font("Arial", 10))
+            using (Font font = new Font("Arial", 8))
             using (Brush brush = new SolidBrush(Color.Black))
             {
-                g.DrawString("1s", font, brush, width - rightMargin - 20, plotHeight / 2 + 10);
+                g.DrawString(Convert.ToString(1f / ten) + "s", font, brush, width - rightMargin - 20 - Math.Min(20, 5 * (int)Math.Log10((double)Frequency)), plotHeight / 2 + 5);
             }
         }
     }
