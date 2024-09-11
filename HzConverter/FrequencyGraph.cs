@@ -13,6 +13,7 @@ namespace HzConverter
     public partial class FrequencyGraph : UserControl
     {
         public float Frequency { get; set; } = 2f;
+        public Color Color { get; set; } = Color.Red;
         public int PointsNum { get; set; } = 500;
         public float Time { get; set; } = 1f;
 
@@ -45,25 +46,31 @@ namespace HzConverter
                 g.DrawLine(pen, leftMargin, 0, leftMargin, plotHeight);
             }
 
-            float ten = (int)Math.Pow(10, (int)Math.Log10((double)Frequency));
-            PointF[] points = new PointF[pointsNum];
-            for (int i = 0; i < pointsNum; i++)
+            if (Frequency > 0)
             {
-                float t = i / (float)(pointsNum - 1) * Time;
-                float y = 50f * (float)Math.Sin(2 * Math.PI * Frequency * t / ten);
-                float xScreen = leftMargin + i / (float)(pointsNum - 1) * plotWidth;
-                float yScreen = plotHeight / 2 - y;
-                points[i] = new PointF(xScreen, yScreen);
-            }
+                float ten = 1;
+                if (Frequency > 1) ten = (float)Math.Pow(10, Math.Floor(Math.Log10((double)Frequency)));
+                else ten = (float)Math.Pow(10, Math.Round(Math.Log10((double)Frequency)));
+                PointF[] points = new PointF[pointsNum];
+                for (int i = 0; i < pointsNum; i++)
+                {
+                    float t = i / (float)(pointsNum - 1) * Time;
+                    float y = 50f * (float)Math.Sin(2 * Math.PI * Frequency * t / ten);
+                    float xScreen = leftMargin + i / (float)(pointsNum - 1) * plotWidth;
+                    float yScreen = plotHeight / 2 - y;
+                    points[i] = new PointF(xScreen, yScreen);
+                }
 
-            using (Pen pen = new Pen(Color.Red, 2))
-            {
-                g.DrawLines(pen, points);
-            }
-            using (Font font = new Font("Arial", 8))
-            using (Brush brush = new SolidBrush(Color.Black))
-            {
-                g.DrawString(Convert.ToString(1f / ten) + "s", font, brush, width - rightMargin - 20 - Math.Min(20, 5 * (int)Math.Log10((double)Frequency)), plotHeight / 2 + 5);
+                using (Pen pen = new Pen(Color, 2))
+                {
+                    g.DrawLines(pen, points);
+                }
+                using (Font font = new Font("Arial", 8))
+                using (Brush brush = new SolidBrush(Color.Black))
+                {
+                    if (ten >= 1) g.DrawString(Convert.ToString(1 / (decimal)ten) + "s", font, brush, width - rightMargin - 20 - Math.Min(20, 5 * (int)Math.Log10((double)Frequency)), plotHeight / 2 + 5);
+                    else g.DrawString(Convert.ToString(Math.Ceiling(1 / (decimal)ten)) + "s", font, brush, width - rightMargin - 20 - 8 * (int)Math.Log10((double)1f/Frequency), plotHeight / 2 + 5);
+                }
             }
         }
     }
