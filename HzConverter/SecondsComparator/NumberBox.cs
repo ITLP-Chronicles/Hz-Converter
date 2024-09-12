@@ -35,6 +35,12 @@ namespace HzConverter
             remove => _innerBox.KeyUp -= value;
         }
 
+        public event EventHandler InnerTextChange
+        {
+            add => _innerBox.TextChanged += value;
+            remove => _innerBox.TextChanged -= value;
+        }
+
         private TextBox _innerBox;
         private Regex _validator = new Regex(@"^\d*(\.)?(\d+)?$");
 

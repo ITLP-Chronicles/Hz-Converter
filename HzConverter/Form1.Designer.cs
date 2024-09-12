@@ -38,10 +38,9 @@
             // tiempoCiclo1
             // 
             tiempoCiclo1.Frequency = 1F;
-            tiempoCiclo1.Location = new Point(24, 356);
-            tiempoCiclo1.Margin = new Padding(3, 4, 3, 4);
+            tiempoCiclo1.Location = new Point(21, 267);
             tiempoCiclo1.Name = "tiempoCiclo1";
-            tiempoCiclo1.Size = new Size(424, 298);
+            tiempoCiclo1.Size = new Size(371, 224);
             tiempoCiclo1.TabIndex = 0;
             // 
             // frequencyGraph1
@@ -52,7 +51,7 @@
             frequencyGraph1.Margin = new Padding(2);
             frequencyGraph1.Name = "frequencyGraph1";
             frequencyGraph1.PointsNum = 500;
-            frequencyGraph1.Size = new Size(350, 259);
+            frequencyGraph1.Size = new Size(306, 194);
             frequencyGraph1.TabIndex = 1;
             frequencyGraph1.Time = 1F;
             // 
@@ -60,19 +59,18 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Black", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(164, 27);
+            label1.Location = new Point(144, 20);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(497, 32);
+            label1.Size = new Size(398, 25);
             label1.TabIndex = 2;
             label1.Text = "Convertidor frecuencia a tiempo por ciclo";
             // 
             // secondsComparatorDiv1
             // 
-            secondsComparatorDiv1.Location = new Point(454, 356);
-            secondsComparatorDiv1.Margin = new Padding(3, 4, 3, 4);
+            secondsComparatorDiv1.Location = new Point(391, 267);
             secondsComparatorDiv1.Name = "secondsComparatorDiv1";
-            secondsComparatorDiv1.Size = new Size(367, 313);
+            secondsComparatorDiv1.Size = new Size(321, 235);
             secondsComparatorDiv1.TabIndex = 3;
             // 
             // convertidorSegahz1
@@ -84,7 +82,7 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(811, 707);
             Controls.Add(convertidorSegahz1);
