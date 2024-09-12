@@ -32,6 +32,7 @@
             frequencyGraph1 = new FrequencyGraph();
             label1 = new Label();
             secondsComparatorDiv1 = new SecondsComparatorDiv();
+            convertidorSegahz1 = new ConvertidorSegAHZ();
             SuspendLayout();
             // 
             // tiempoCiclo1
@@ -47,8 +48,8 @@
             // 
             frequencyGraph1.Color = Color.LimeGreen;
             frequencyGraph1.Frequency = 2F;
-            frequencyGraph1.Location = new Point(237, 80);
-            frequencyGraph1.Margin = new Padding(2, 2, 2, 2);
+            frequencyGraph1.Location = new Point(40, 73);
+            frequencyGraph1.Margin = new Padding(2);
             frequencyGraph1.Name = "frequencyGraph1";
             frequencyGraph1.PointsNum = 500;
             frequencyGraph1.Size = new Size(350, 259);
@@ -74,17 +75,25 @@
             secondsComparatorDiv1.Size = new Size(367, 313);
             secondsComparatorDiv1.TabIndex = 3;
             // 
+            // convertidorSegahz1
+            // 
+            convertidorSegahz1.Location = new Point(395, 137);
+            convertidorSegahz1.Name = "convertidorSegahz1";
+            convertidorSegahz1.Size = new Size(404, 130);
+            convertidorSegahz1.TabIndex = 4;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(828, 667);
+            ClientSize = new Size(811, 707);
+            Controls.Add(convertidorSegahz1);
             Controls.Add(secondsComparatorDiv1);
             Controls.Add(label1);
             Controls.Add(frequencyGraph1);
             Controls.Add(tiempoCiclo1);
             FormBorderStyle = FormBorderStyle.Fixed3D;
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Form1";
@@ -100,5 +109,6 @@
         private FrequencyGraph frequencyGraph1;
         private Label label1;
         private SecondsComparatorDiv secondsComparatorDiv1;
+        private ConvertidorSegAHZ convertidorSegahz1;
     }
 }

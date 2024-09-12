@@ -23,8 +23,8 @@ namespace HzConverter
             try
             {
                 // Obtenemos los valores ingresados por el usuario
-                double frecuencia = double.Parse(txtFrecuencia.Text);
-                double tiempo = double.Parse(txtTiempo.Text);
+                double frecuencia = double.Parse(txtFrecuencia.InnerText);
+                double tiempo = double.Parse(txtTiempo.InnerText);
                 string unidad = cmbUnidad.SelectedItem.ToString();
                 string unidadT = cmbTiempo.SelectedItem.ToString();
 
@@ -89,44 +89,10 @@ namespace HzConverter
             }
         }
 
-        private void txtFrecuencia_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar)) e.Handled = true;
-            else if (txtFrecuencia.Text.Length >= 15 && !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txtTiempo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar)) e.Handled = true;
-            else if (txtTiempo.Text.Length >= 15 && !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
         private void TiempoCiclo_Load(object sender, EventArgs e)
         {
             cmbUnidad.SelectedIndex = 0;
             cmbTiempo.SelectedIndex = 0;
-        }
-
-        private void txtFrecuencia_TextChanged(object sender, EventArgs e)
-        {
-            ValidateTB();
-        }
-
-        private void txtTiempo_TextChanged(object sender, EventArgs e)
-        {
-            ValidateTB();
-        }
-
-        private void ValidateTB()
-        {
-            if (txtFrecuencia.Text != "" && txtTiempo.Text != "") btnCalcular.Enabled = true;
-            else btnCalcular.Enabled = false;
         }
     }
 }
