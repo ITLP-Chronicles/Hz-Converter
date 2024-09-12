@@ -7,7 +7,10 @@
     <Compile Update="FrequencyGraph.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="SecondsComparator\SecondsComparatorDiv.cs">
+    <Compile Update="Comps\BetterNumberBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Comps\SecondsComparatorDiv.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="SecondsComparator\NumberBox.cs">

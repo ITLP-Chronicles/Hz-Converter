@@ -1,4 +1,4 @@
-﻿using HzConverter.SecondsComparator;
+﻿using HzConverter.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,10 +14,10 @@ namespace HzConverter
 {
     public partial class NumberBox : UserControl
     {
-        private SecondUnits _selfUnit;
+        private Powers_of_Ten _selfUnit;
         [Category("Custom Props")]
         [Description("The unit of the number")]
-        public SecondUnits Unit
+        public Powers_of_Ten Unit
         {
             get => _selfUnit;
             set => _selfUnit = value;
@@ -53,6 +53,14 @@ namespace HzConverter
 
         private void ConfigInnerTextBox()
         {
+            _innerBox.Leave += (sender, e) =>
+            {
+               if (_innerBox.Text == string.Empty)
+                {
+                    _innerBox.Text = "0";
+                }
+            };
+ 
             _innerBox.KeyPress += (sender, e) =>
             {
                 if(!_validator.IsMatch(_innerBox.Text + e.KeyChar) 

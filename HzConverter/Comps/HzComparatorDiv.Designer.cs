@@ -1,6 +1,8 @@
-﻿namespace HzConverter
+﻿using HzConverter.Utils;
+
+namespace HzConverter
 {
-    partial class SecondsComparatorDiv
+    partial class HzComparatorDiv
     {
         /// <summary> 
         /// Required designer variable.
@@ -45,97 +47,97 @@
             label1.AutoSize = true;
             label1.Location = new Point(16, 24);
             label1.Name = "label1";
-            label1.Size = new Size(76, 15);
+            label1.Size = new Size(21, 15);
             label1.TabIndex = 2;
-            label1.Text = "Segundos (S)";
+            label1.Text = "Hz";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Location = new Point(16, 64);
             label2.Name = "label2";
-            label2.Size = new Size(105, 15);
+            label2.Size = new Size(27, 15);
             label2.TabIndex = 4;
-            label2.Text = "Milisegundos (ms)";
+            label2.Text = "kHz";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Location = new Point(16, 109);
             label3.Name = "label3";
-            label3.Size = new Size(112, 15);
+            label3.Size = new Size(32, 15);
             label3.TabIndex = 6;
-            label3.Text = "Microsegundos (μs)";
+            label3.Text = "MHz";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Location = new Point(16, 155);
             label4.Name = "label4";
-            label4.Size = new Size(110, 15);
+            label4.Size = new Size(29, 15);
             label4.TabIndex = 8;
-            label4.Text = "Nanosegundos (ns)";
+            label4.Text = "GHz";
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Location = new Point(16, 200);
             label5.Name = "label5";
-            label5.Size = new Size(104, 15);
+            label5.Size = new Size(27, 15);
             label5.TabIndex = 10;
-            label5.Text = "Picosegundos (ps)";
+            label5.Text = "THz";
             // 
             // numberBox1
             // 
             numberBox1.InnerText = "0";
-            numberBox1.Location = new Point(140, 15);
+            numberBox1.Location = new Point(58, 191);
             numberBox1.MinimumSize = new Size(0, 24);
             numberBox1.Name = "numberBox1";
             numberBox1.Size = new Size(159, 24);
             numberBox1.TabIndex = 12;
-            numberBox1.Unit = SecondsComparator.SecondUnits.Second;
+            numberBox1.Unit = Powers_of_Ten.Ten;
             // 
             // numberBox2
             // 
             numberBox2.InnerText = "0";
-            numberBox2.Location = new Point(140, 55);
+            numberBox2.Location = new Point(58, 146);
             numberBox2.MinimumSize = new Size(0, 24);
             numberBox2.Name = "numberBox2";
             numberBox2.Size = new Size(159, 24);
             numberBox2.TabIndex = 13;
-            numberBox2.Unit = SecondsComparator.SecondUnits.Milisecond;
+            numberBox2.Unit = Powers_of_Ten.Ten_3;
             // 
             // numberBox3
             // 
             numberBox3.InnerText = "0";
-            numberBox3.Location = new Point(140, 100);
+            numberBox3.Location = new Point(58, 100);
             numberBox3.MinimumSize = new Size(0, 24);
             numberBox3.Name = "numberBox3";
             numberBox3.Size = new Size(159, 24);
             numberBox3.TabIndex = 14;
-            numberBox3.Unit = SecondsComparator.SecondUnits.Microsecond;
+            numberBox3.Unit = Powers_of_Ten.Ten_6;
             // 
             // numberBox4
             // 
             numberBox4.InnerText = "0";
-            numberBox4.Location = new Point(140, 146);
+            numberBox4.Location = new Point(58, 55);
             numberBox4.MinimumSize = new Size(0, 24);
             numberBox4.Name = "numberBox4";
             numberBox4.Size = new Size(159, 24);
             numberBox4.TabIndex = 15;
-            numberBox4.Unit = SecondsComparator.SecondUnits.Nanosecond;
+            numberBox4.Unit = Powers_of_Ten.Ten_9;
             // 
             // numberBox5
             // 
             numberBox5.InnerText = "0";
-            numberBox5.Location = new Point(140, 191);
+            numberBox5.Location = new Point(58, 15);
             numberBox5.MinimumSize = new Size(0, 24);
             numberBox5.Name = "numberBox5";
             numberBox5.Size = new Size(159, 24);
             numberBox5.TabIndex = 16;
-            numberBox5.Unit = SecondsComparator.SecondUnits.Picosecond;
+            numberBox5.Unit = Powers_of_Ten.Ten_12;
             // 
-            // DivComparator
+            // HzComparatorDiv
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -149,8 +151,8 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "DivComparator";
-            Size = new Size(322, 237);
+            Name = "HzComparatorDiv";
+            Size = new Size(243, 237);
             ResumeLayout(false);
             PerformLayout();
         }

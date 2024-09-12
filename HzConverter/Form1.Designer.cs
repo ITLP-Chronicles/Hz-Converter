@@ -46,7 +46,7 @@
             // 
             frequencyGraph1.Color = Color.LimeGreen;
             frequencyGraph1.Frequency = 2F;
-            frequencyGraph1.Location = new Point(207, 60);
+            frequencyGraph1.Location = new Point(56, 68);
             frequencyGraph1.Margin = new Padding(2);
             frequencyGraph1.Name = "frequencyGraph1";
             frequencyGraph1.PointsNum = 500;
