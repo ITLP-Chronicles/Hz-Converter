@@ -7,5 +7,8 @@
     <Compile Update="FrequencyGraph.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="TiempoCiclo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
