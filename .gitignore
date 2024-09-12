@@ -396,3 +396,14 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/.vs/HzConverter/v17/.suo
+/.vs/HzConverter/v17/DocumentLayout.json
+/HzConverter/obj/Debug/net8.0-windows/HzConverter.AssemblyInfo.cs
+/HzConverter/obj/Debug/net8.0-windows/HzConverter.AssemblyInfoInputs.cache
+/HzConverter/obj/Debug/net8.0-windows/HzConverter.assets.cache
+/HzConverter/obj/Debug/net8.0-windows/HzConverter.designer.runtimeconfig.json
+/HzConverter/obj/Debug/net8.0-windows/HzConverter.GeneratedMSBuildEditorConfig.editorconfig
+/HzConverter/obj/HzConverter.csproj.nuget.dgspec.json
+/HzConverter/obj/HzConverter.csproj.nuget.g.props
+/HzConverter/obj/project.assets.json
+/HzConverter/obj/project.nuget.cache
