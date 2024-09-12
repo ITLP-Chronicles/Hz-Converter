@@ -68,7 +68,7 @@ namespace HzConverter
                 using (Font font = new Font("Arial", 8))
                 using (Brush brush = new SolidBrush(Color.Black))
                 {
-                    if (ten >= 1) g.DrawString(Convert.ToString(1 / (decimal)ten) + "s", font, brush, width - rightMargin - 20 - Math.Min(20, 5 * (int)Math.Log10((double)Frequency)), plotHeight / 2 + 5);
+                    if (ten >= 1) g.DrawString(Convert.ToString(1 / (decimal)ten) + "s", font, brush, width - rightMargin - 20 - 8 * (int)Math.Log10((double)Frequency), plotHeight / 2 + 5);
                     else g.DrawString(Convert.ToString(Math.Ceiling(1 / (decimal)ten)) + "s", font, brush, width - rightMargin - 20 - 8 * (int)Math.Log10((double)1f/Frequency), plotHeight / 2 + 5);
                 }
             }

@@ -12,6 +12,7 @@ namespace HzConverter
 {
     public partial class TiempoCiclo : UserControl
     {
+        public float Frequency { get; set; } = 1f;
         public TiempoCiclo()
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace HzConverter
 
                 // Convertimos la frecuencia a Hz
                 double frecuenciaEnHz = ConvertirFrecuenciaAHz(frecuencia, unidad);
+                Frequency = (float)frecuenciaEnHz;
 
                 // Convertimos el tiempo a Segundos
                 double tiempoSeg = ConvertirTiempoASegundos(tiempo, unidadT);
@@ -90,11 +92,19 @@ namespace HzConverter
         private void txtFrecuencia_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar)) e.Handled = true;
+            else if (txtFrecuencia.Text.Length >= 15 && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtTiempo_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar)) e.Handled = true;
+            else if (txtTiempo.Text.Length >= 15 && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void TiempoCiclo_Load(object sender, EventArgs e)

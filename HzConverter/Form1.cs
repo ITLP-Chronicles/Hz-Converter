@@ -9,7 +9,7 @@ namespace HzConverter
         }
         private void UpdateFrequencyGraph(object sender, EventArgs e)
         {
-            frequencyGraph1.Frequency = Convert.ToInt32(tiempoCiclo1.txtFrecuencia.Text);
+            frequencyGraph1.Frequency = tiempoCiclo1.Frequency;
             frequencyGraph1.Invalidate();
         }
     }
